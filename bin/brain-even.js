@@ -1,4 +1,5 @@
-import playGame from '../src/cli.js';
-import { description, generateRound } from '../src/be.js';
+#!/usr/bin/env node
+import playGame from '../src/engine.js';
+import { description, generateRound } from '../src/games/be.js';
 
 playGame(description, generateRound);

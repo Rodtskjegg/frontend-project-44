@@ -1,3 +1,4 @@
-import startCalcGame from '../src/bc.js';
+#!/usr/bin/env node
+import startCalcGame from '../src/games/bc.js';
 
 startCalcGame();

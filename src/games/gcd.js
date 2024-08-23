@@ -1,5 +1,5 @@
 export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-import playGame from '../src/cli.js';
+import playGame from '../engine.js';
 
 // Функция для нахождения НОД (алгоритм Евклида)
 const findGCD = (a, b) => {
