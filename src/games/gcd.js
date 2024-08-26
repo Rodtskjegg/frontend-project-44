@@ -1,12 +1,16 @@
-export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 import playGame from '../engine.js';
+export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 // Функция для нахождения НОД (алгоритм Евклида)
 const findGCD = (a, b) => {
-  while (b !== 0) {
-    [a, b] = [b, a % b];
+  let x = a;
+  let y = b;
+  while (y !== 0) {
+    const temp =y;
+    y =x % y;
+    x = temp;
   }
-  return a;
+  return x;
 };
 
 const generateRound = () => {
