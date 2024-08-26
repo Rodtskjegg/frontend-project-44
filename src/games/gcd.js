@@ -1,4 +1,5 @@
 import playGame from '../engine.js';
+
 export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 // Функция для нахождения НОД (алгоритм Евклида)
@@ -6,8 +7,8 @@ const findGCD = (a, b) => {
   let x = a;
   let y = b;
   while (y !== 0) {
-    const temp =y;
-    y =x % y;
+    const temp = y;
+    y = x % y;
     x = temp;
   }
   return x;
