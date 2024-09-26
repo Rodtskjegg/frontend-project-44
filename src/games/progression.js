@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../utils.js';
+import { getRandomInRange } from '../utils.js';
 
 const generateProgression = (start, step, length) => {
   const progression = [];
@@ -8,13 +8,13 @@ const generateProgression = (start, step, length) => {
   return progression;
 };
 
-const generateRound = () => {
-  const progressionLength = getRandomNumber(5, 10); // Длина прогрессии от 5 до 10 чисел
-  const start = getRandomNumber(1, 10); // Начальное число
-  const step = getRandomNumber(1, 10); // Шаг прогрессии
+export const generateRound = () => {
+  const progressionLength = getRandomInRange(5, 10);
+  const start = getRandomInRange(1, 10);
+  const step = getRandomInRange(1, 10);
   const progression = generateProgression(start, step, progressionLength);
 
-  const hiddenIndex = getRandomNumber(0, progressionLength - 1);
+  const hiddenIndex = getRandomInRange(0, progressionLength - 1);
   const correctAnswer = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
 
@@ -23,4 +23,4 @@ const generateRound = () => {
   return [question, String(correctAnswer)];
 };
 
-export default generateRound;
+export const description = 'What number is missing in the progression?';
