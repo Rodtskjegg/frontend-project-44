@@ -1,3 +1,5 @@
+import { getRandomNumber } from '../utils.js';
+
 export const isPrime = (num) => {
   if (num < 2) return false;
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
@@ -9,9 +11,10 @@ export const isPrime = (num) => {
 };
 
 export const generateRound = () => {
-  const number = Math.floor(Math.random() * 100) + 1;
+  const number = getRandomNumber(1, 100);
   const question = number.toString();
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
+
 export const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';

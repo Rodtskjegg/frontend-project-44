@@ -1,4 +1,4 @@
-export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+import { getRandomNumber } from '../utils.js';
 
 const generateProgression = (start, step, length) => {
   const progression = [];
