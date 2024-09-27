@@ -1,5 +1,4 @@
-
-import playGame from './engine.js'; 
+import playGame from './engine.js';
 import * as evenGame from './games/even.js';
 import * as primeGame from './games/prime.js';
 import * as progressionGame from './games/progression.js';
