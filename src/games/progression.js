@@ -1,4 +1,4 @@
-import { getRandomInRange } from '../utils.js';
+import getRandomInRange from '../utils.js';
 
 const generateProgression = (start, step, length) => {
   const progression = [];

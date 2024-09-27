@@ -1,6 +1,6 @@
 import playGame from '../engine.js';
 
-import { getRandomNumber } from '../utils.js';
+import getRandomInRange from '../utils.js';
 
 const operators = ['+', '-', '*'];
 
@@ -18,9 +18,9 @@ const calculate = (num1, num2, operator) => {
 };
 
 const generateRound = () => {
-  const num1 = getRandomNumber(1, 100);
-  const num2 = getRandomNumber(1, 100);
-  const operator = operators[getRandomNumber(0, operators.length - 1)];
+  const num1 = getRandomInRange(1, 100);
+  const num2 = getRandomInRange(1, 100);
+  const operator = operators[getRandomInRange(0, operators.length - 1)];
 
   const question = `${num1} ${operator} ${num2}`;
   const correctAnswer = calculate(num1, num2, operator).toString();
