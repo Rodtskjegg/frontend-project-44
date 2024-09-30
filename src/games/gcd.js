@@ -24,9 +24,7 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-const startGcdGame = () => {
+export default () => {
   const description = 'Find the greatest common divisor of given numbers.';
   playGame(description, generateRound);
 };
-
-export default startGcdGame;

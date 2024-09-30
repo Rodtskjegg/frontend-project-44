@@ -28,9 +28,7 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-const startCalcGame = () => {
+export default () => {
   const description = 'What is the result of the expression?';
   playGame(description, generateRound);
 };
-
-export default startCalcGame;

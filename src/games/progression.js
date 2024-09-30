@@ -1,3 +1,5 @@
+import playGame from '../engine.js';
+
 import getRandomInRange from '../utils.js';
 
 const generateProgression = (start, step, length) => {
@@ -8,7 +10,7 @@ const generateProgression = (start, step, length) => {
   return progression;
 };
 
-export const generateRound = () => {
+const generateRound = () => {
   const progressionLength = getRandomInRange(5, 10);
   const start = getRandomInRange(1, 10);
   const step = getRandomInRange(1, 10);
@@ -23,4 +25,7 @@ export const generateRound = () => {
   return [question, String(correctAnswer)];
 };
 
-export const description = 'What number is missing in the progression?';
+export default () => {
+  const description = 'What number is missing in the progression?';
+  playGame(description, generateRound);
+};
